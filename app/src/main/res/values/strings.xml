@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Stock Hawk</string>
+
+    <!-- Shared Preferences -->
+    <string name="pref_stocks_initialized_key" translatable="false">initialized</string>
+    <string name="pref_stocks_key" translatable="false">stocks</string>
+    <string name="pref_symbol_status_key" translatable="false">symbol-status-key</string>
+    <string name="pref_display_mode_key" translatable="false">displayMode</string>
+    <string name="pref_display_mode_default" translatable="false">@string/pref_display_mode_percentage_key</string>
+    <string name="pref_display_mode_absolute_key" translatable="false">absolute</string>
+    <string name="pref_display_mode_percentage_key" translatable="false">percentage</string>
+    <string name="action_change_units" translatable="false">@string/pref_display_mode_key</string>
+
+    <string name="default_stocks_yahoo">YHOO</string>
+    <string name="default_stocks_apple">AAPL</string>
+    <string name="default_stocks_microsoft">MSFT</string>
+    <string name="default_stocks_facebook">FB</string>
+
+    <string name="dialog_title">Add Stock</string>
+    <string name="dialog_hint">Symbol (e.g. GOOG)</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_add">Add</string>
+
+    <string name="error_no_network">No network connectivity! Will load stock cursor when the network is available.</string>
+    <string name="error_no_stocks">No stocks added! Hit the floating action button to add one.</string>
+
+    <string name="toast_stock_added_no_connectivity">Symbol %s added. Will refresh when network available.</string>
+    <string name="toast_no_connectivity">Will refresh when network available.</string>
+
+    <string name="toast_no_symbol">Symbol not found.</string>
+
+    <!-- Detail Activity Strings -->
+    <string name="years">year analysis</string>
+    <string name="current_value">current value</string>
+    <string name="highest_value">highest value</string>
+    <string name="lowest_value">lowest value</string>
+    <string name="percentage_change">percentage change</string>
+
+    <!-- Widget Strings -->
+    <string name="title_widget_detail">Stock Hawk</string>
+    <string name="no_stocks_added">No stocks added!</string>
+
+    <!-- A11y -->
+    <string name="a11y_symbol">Symbol</string>
+    <string name="a11y_changed_by">changed by</string>
+    <string name="a11y_add_button">Add Stock</string>
+    <string name="a11y_enter_symbol_edit_text">Enter a symbol.</string>
+    <string name="a11y_for">for</string>    <!-- As in: 2 year analysis * for * GOOG -->
+    <string name="a11y_lowest_value">Lowest value</string>
+    <string name="a11y_highest_value">Highest value</string>
+    <string name="a11y_current_value">Current value</string>
+    <string name="a11y_percentage_change">Percentage change</string>
+    <string name="a11y_graph_downward">Graph displays a downward trend in value over time.</string>
+    <string name="a11y_graph_upward">Graph displays an upward trend in value over time.</string>
+    <string name="a11y_graph_neutral">Graph displays no trend in value over time.</string>
+    <string name="a11y_percentage_change_icon">Double tap to display change in percentage.</string>
+    <string name="a11y_absolute_change_icon">Double tap to display change in absolute value.</string>
+    <!-- A11y for clear pronunciation of letters by English Android Text to Speech -->
+    <string name="a11y_a" translatable="false">Ay</string>
+    <string name="a11y_f" translatable="false">Ef</string>
+
+</resources>

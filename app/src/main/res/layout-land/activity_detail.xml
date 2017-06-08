@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:context="com.udacity.stockhawk.ui.DetailActivity">
+
+        <TextView
+            android:id="@+id/detail_stock_symbol"
+            style="@style/StockSymbolTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.1"
+            tools:text="GOOG" />
+
+        <TextView
+            android:id="@+id/detail_timeframe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toStartOf="@+id/detail_stock_symbol"
+            app:layout_constraintTop_toBottomOf="@+id/detail_stock_symbol"
+            tools:text="2 year analysis" />
+
+
+        <TextView
+            android:id="@+id/detail_percentage"
+            style="@style/PercentChangeTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/detail_percentage_label"
+            app:layout_constraintStart_toStartOf="@+id/detail_lowest_label"
+            tools:text="1.05%" />
+
+        <TextView
+            android:id="@+id/detail_current_price"
+            style="@style/BidPriceTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/detail_current_label"
+            app:layout_constraintEnd_toEndOf="@+id/detail_highest_label"
+            tools:text="$829.54" />
+
+        <TextView
+            android:id="@+id/detail_lowest_price"
+            style="@style/BidPriceTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/detail_lowest_label"
+            app:layout_constraintStart_toStartOf="@+id/detail_lowest_label"
+            tools:text="$554.02" />
+
+        <TextView
+            android:id="@+id/detail_highest_price"
+            style="@style/BidPriceTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/detail_highest_label"
+            app:layout_constraintEnd_toEndOf="@+id/detail_highest_label"
+            tools:text="$862.17" />
+
+        <TextView
+            android:id="@+id/detail_percentage_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/detail_lowest_price"
+            app:layout_constraintStart_toStartOf="@+id/detail_lowest_label"
+            tools:text="percentage change" />
+
+        <TextView
+            android:id="@+id/detail_current_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/detail_highest_price"
+            app:layout_constraintEnd_toEndOf="@+id/detail_highest_label"
+            tools:text="current price" />
+
+        <TextView
+            android:id="@+id/detail_lowest_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.9"
+            app:layout_constraintHorizontal_bias="0.1"
+            tools:text="lowest price" />
+
+
+        <TextView
+            android:id="@+id/detail_highest_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.9"
+            tools:text="highest price" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_margin="16dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+</LinearLayout>
